@@ -1,10 +1,19 @@
 const originalScript = "https://script.google.com/macros/s/AKfycbwU_DqtcVsm7wCgJXEkXVxMc7fSqhMh6CXOTiSsCV4tGSL-_JT9s1PdLt2FEaaWApgq/exec";
-const endpoint = "https://api.allorigins.win/raw?url=" + encodeURIComponent(originalScript);
+const endpoint = "https://api.allorigins.win/get?url=" + encodeURIComponent(originalScript);
 const carousel = document.getElementById("carousel");
 
 fetch(endpoint)
   .then(res => res.json())
-  .then(urls => {
+  .then(data => {
+    let urls;
+    try {
+      urls = JSON.parse(data.contents);
+    } catch (e) {
+      console.error("No se pudo parsear JSON:", e);
+      carousel.innerHTML = "<p>Error al procesar las imágenes.</p>";
+      return;
+    }
+
     if (!urls.length) {
       carousel.innerHTML = "<p>No se encontraron imágenes.</p>";
       return;
