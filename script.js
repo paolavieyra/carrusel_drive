@@ -1,4 +1,5 @@
-const endpoint = "https://script.google.com/macros/s/AKfycbylodRBByTL4j1y22Pwu3SLAyku3Kpaye4d9TJfCfaysMb6B3WS0tKwFLoKJ9IXCQpB/exec";
+const endpoint = "https://script.google.com/macros/s/AKfycby_oBQFYpetHZ7EVAtJhAiJyT9un9WakRxJ8Y23OVjflOmu6t_vVmK-EHDgloaqSSQn/exec";
+
 const carousel = document.getElementById("carousel");
 
 fetch(endpoint)
