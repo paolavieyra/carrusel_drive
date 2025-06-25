@@ -2,17 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Carrusel sin CORB</title>
+  <title>Carrusel desde Drive</title>
   <style>
     body {
-      margin: 0; padding: 2rem;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      background: #eee; min-height: 100vh;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #f0f0f0;
       font-family: sans-serif;
     }
     .carousel {
       position: relative;
-      width: 90vw; max-width: 600px;
+      width: 90vw;
+      max-width: 600px;
       height: 400px;
       overflow: hidden;
       border-radius: 15px;
@@ -33,7 +39,7 @@
   </style>
 </head>
 <body>
-  <h1>Carrusel desde Google Drive (sin CORB)</h1>
+  <h1>Carrusel dinámico desde Google Drive</h1>
   <div class="carousel" id="carousel"></div>
 
   <script src="script.js"></script>
